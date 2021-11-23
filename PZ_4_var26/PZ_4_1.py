@@ -22,10 +22,10 @@ while True:
 while True:
     if A < B:
         print("Перечень чисел")
-        while A != B-1:
-            A += 1
+        while B != A+1:
+            B -= 1
             N += 1
-            print(A)
+            print(B)
         print("Количество чисел =", N)
         break
     else:
