@@ -5,7 +5,7 @@ X = input("Введите координату (X): ")
 Y = input("Введите координату (Y): ")
 
 # Проверка на ввод числа не буквы.
-while type(X) != int:
+while X != int:
     try:
         X = int(X)
         Y = int(Y)
