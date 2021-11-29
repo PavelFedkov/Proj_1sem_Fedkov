@@ -4,7 +4,6 @@
 N = input("Введите число (N): ")
 K = 0
 SUMM = 0
-
 while True:
     try:
         N = int(N)

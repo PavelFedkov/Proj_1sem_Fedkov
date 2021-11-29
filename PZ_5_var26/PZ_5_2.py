@@ -10,7 +10,6 @@ def InvertDigits(K):              # Функция
     return p
 
 K = input("Введите порядок чисел: ")
-
 while K != int:                 # Проверка на число
     try:
         K = int(K)
