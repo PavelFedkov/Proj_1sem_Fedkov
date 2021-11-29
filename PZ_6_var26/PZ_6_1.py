@@ -15,4 +15,4 @@ for i in range(len(spisok) - 1):  # функция вычесляющая пор
     else:
         k=i+2
         break
-print(k)
+print("Ошибка под номером: ",k)

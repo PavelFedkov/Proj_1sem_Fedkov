@@ -4,3 +4,29 @@
 #                             R = √(x2 – x1)^2 + (у2 – y1)^2
 # Для хранения данных о каждом наборе точек следует использовать по два списка: первый список для хранения абсцисс,
 # второй — для хранения ординат.
+
+from math import *
+
+N = int(input("Введите кол-во точек: "))
+X = []
+Y = []
+for i in range(N):
+    X.append(int(input("Введите координату X" + str(i + 1) + ":")))
+    Y.append(int(input("Введите координату Y" + str(i + 1) + ":")))
+print(X)
+print(Y)
+sum =[]
+
+for h in range(N):
+    S = 0
+    for i in range(N - 1):
+        if i < N:
+            R = (sqrt(pow((X[h] - X[i+1]),2) + pow((Y[h]-Y[i+1]),2)))
+        else:
+            R = (sqrt(pow((X[h] - X[i]), 2) + pow((Y[h] - Y[i]), 2)))
+        print(R)
+        S += R
+
+    sum.append(S)
+print(sum)
+
