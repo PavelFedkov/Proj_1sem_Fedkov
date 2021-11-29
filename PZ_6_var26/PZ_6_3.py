@@ -27,7 +27,6 @@ for h in range(N):   # Функция нахождения сумм рассто
     X = X[1:]
     Y = Y[1:]
     sum.append(round(S , 2)) # Ввод в список сумм с округлением до сотых
-
 print("Минимальная сумма расстояний: ",min(sum))
 print("Координаты точки: (", X[sum.index(min(sum))],";",Y[sum.index(min(sum))],")")
 
