@@ -5,28 +5,29 @@
 # Для хранения данных о каждом наборе точек следует использовать по два списка: первый список для хранения абсцисс,
 # второй — для хранения ординат.
 
-from math import *
+from math import *    # Импорт функций из библиотеки math
 
 N = int(input("Введите кол-во точек: "))
 X = []
 Y = []
-for i in range(N):
+for i in range(N):   # Функция позволяющая пользователю ручной ввод
     X.append(int(input("Введите координату X" + str(i + 1) + ":")))
     Y.append(int(input("Введите координату Y" + str(i + 1) + ":")))
-print(X)
-print(Y)
-sum =[]
 
-for h in range(N):
+sum =[]              # Список сумм
+
+for h in range(N):   # Функция нахождения сумм расстояний
     S = 0
     for i in range(N - 1):
-        if i < N:
-            R = (sqrt(pow((X[h] - X[i+1]),2) + pow((Y[h]-Y[i+1]),2)))
-        else:
-            R = (sqrt(pow((X[h] - X[i]), 2) + pow((Y[h] - Y[i]), 2)))
-        print(R)
+        R = (sqrt(pow((X[0] - X[i+1]),2) + pow((Y[0]-Y[i+1]),2)))
         S += R
 
-    sum.append(S)
-print(sum)
+    X.append(X[0])   # Прокрутка списка координат
+    Y.append(Y[0])
+    X = X[1:]
+    Y = Y[1:]
+    sum.append(round(S , 2)) # Ввод в список сумм с округлением до сотых
+
+print("Минимальная сумма расстояний: ",min(sum))
+print("Координаты точки: (", X[sum.index(min(sum))],";",Y[sum.index(min(sum))],")")
 
