@@ -6,7 +6,7 @@ import modul
 
 # print(modul.list_doc.doc)
 
-print(modul.file_doc.doc)
+print(modul.dom)
 
 # print(modul.get_binary())
 
